@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const categorySchema = new mongoose.Schema({
+const channelSchema = new mongoose.Schema({
   title: {
     type: String,
     unique: true,
@@ -20,14 +20,31 @@ const categorySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  _owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
   // gps: {
   //   type: String,
   //   required: true,
   // },
 }, {
   timestamps: true,
+  toJSON: {
+    virtuals: false,
+    transform: function (doc, ret, options) {
+      let userId = (options.user && options.user._id) || false;
+      ret.editable = userId && userId.equals(doc._owner);
+      return ret;
+    },
+  },
 });
 
-const Category = mongoose.model('Category', categorySchema);
+// channelSchema.virtual('length').get(function length() {
+//   return this.text.length;
+// });
 
-module.exports = Category;
+const Channel = mongoose.model('Channel', channelSchema);
+
+module.exports = Channel;
