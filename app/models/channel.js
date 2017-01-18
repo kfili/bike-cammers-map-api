@@ -10,6 +10,7 @@ const categorySchema = new mongoose.Schema({
   },
   city: {
     type: String,
+    required: true,
   },
   state: {
     type: String,
