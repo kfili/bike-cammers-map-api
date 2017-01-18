@@ -3,6 +3,10 @@
 const mongoose = require('mongoose');
 
 const categorySchema = new mongoose.Schema({
+  title: {
+    type: String,
+    unique: true,
+  },
   url: {
     type: String,
     unique: true,
