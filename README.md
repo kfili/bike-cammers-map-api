@@ -1,22 +1,18 @@
-# Bike Cammers Map Api
-
-An API to store youtube channel data and metadata.
-
----
+# Bike Cammers Map
+by Kosta Filiotis
 
 ## Links
+The frontend is deployed here:<br>
+https://kfili.github.io/bike-cammers-map
 
-The front-end is deployed here:<br>
+The backend is deployed here:<br>
+https://immense-anchorage-70603.herokuapp.com
 
+The frontend repository can be found here:<br>
+https://github.com/kfili/bike-cammers-map
 
-The back-end is deployed here:<br>
-
-
-The front-end repository can be found here:<br>
-
-
-The back-end deployed repository can be found here:<br>
-
+The backend repository can be found here:<br>
+https://github.com/kfili/bike-cammers-map-api
 
 ---
 
